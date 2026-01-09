@@ -1,0 +1,40 @@
+@import "tailwindcss";
+
+@theme {
+  --default-font-family: "Space Grotesk", sans-serif;
+
+  --color-primary: #00F0FF;
+  --color-primary-soft: #67E8F9;
+  --color-primary-dark: #0E7490;
+
+  --color-main: #F8FAFC;
+  --color-surface: #0F172A;
+  --color-muted: #0A2540;
+
+  --color-text-primary: #F8FAFC;
+  --color-text-secondary: #CBD5E1;
+  --color-text-muted: #334155;
+
+  --color-success: #22C55E;
+  --color-warning: #FACC15;
+  --color-error: #EF4444;
+  --color-info: #38BDF8;
+
+  --color-border: #1E293B;
+}
+
+.hero-contact {
+  background-image: url("../assets/contact-bg.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  padding: 16px;
+}
+
+.hero-about {
+  background-image: url("../assets/hero-about.png");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  padding: 16px;
+}
