@@ -1,0 +1,77 @@
+---
+import Terminal from "../ui/Terminal.astro";
+---
+
+<section
+    class="hero-home relative min-h-dvh flex flex-col md:flex-row items-center justify-between px-4 md:px-16 lg:px-24 xl:px-32 py-24 overflow-hidden"
+>
+    <div class="absolute inset-0 bg-black/60"></div>
+
+    <div class="relative z-10 w-full md:w-10/12 mx-auto flex items-center justify-between gap-6">
+            <div>
+                <div
+                    class="flex items-center gap-2 px-4 py-2 rounded-full border border-slate-300 bg-white/70 backdrop-blur text-xs text-slate-700 shadow-sm w-fit"
+                >
+                    <div class="flex items-center">
+                        <img
+                            class="size-7 rounded-full border-2 border-white"
+                            src="https://images.unsplash.com/photo-1633332755192-727a05c4013d?q=80&w=50"
+                        />
+                        <img
+                            class="size-7 rounded-full border-2 border-white -ml-2"
+                            src="https://images.unsplash.com/photo-1535713875002-d1d0cf377fde?q=80&w=50"
+                        />
+                        <img
+                            class="size-7 rounded-full border-2 border-white -ml-2"
+                            src="https://images.unsplash.com/photo-1438761681033-6461ffad8d80?q=80&w=50"
+                        />
+                    </div>
+                    <span>Join community of 1m+ founders</span>
+                </div>
+
+                <h1 class="text-center text-white md:text-left text-5xl md:text-6xl font-semibold max-w-xl leading-tight">
+                    No escribimos código.
+                    <span class="bg-linear-to-r from-slate-500 to-slate-300 bg-clip-text text-transparent">
+                        Diseñamos el Futuro.
+                    </span>
+                </h1>
+
+                <p class="text-center md:text-left text-slate-300 max-w-lg text-base">
+                    Agencia de desarrollo de software de alto rendimiento. Transformamos ideas complejas en experiencias digitales escalables, rápidas y visualmente impactantes.
+                </p>
+
+                <div class="flex items-center gap-4 mt-6">
+                    <button
+                        class="bg-black text-white rounded-md px-7 h-11 hover:bg-slate-900 transition shadow-lg shadow-black/20 active:scale-95"
+                    >
+                        Get started
+                    </button>
+
+                    <button
+                        class="flex items-center gap-2 rounded-md px-6 h-11 border border-slate-300 bg-white/70 backdrop-blur hover:bg-white transition active:scale-95"
+                    >
+                        <svg
+                            xmlns="http://www.w3.org/2000/svg"
+                            width="22"
+                            height="22"
+                            viewBox="0 0 24 24"
+                            fill="none"
+                            stroke="currentColor"
+                            stroke-width="1.5"
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                        >
+                            <path
+                                d="m16 13 5.223 3.482a.5.5 0 0 0 .777-.416V7.87a.5.5 0 0 0-.752-.432L16 10.5"
+                            ></path>
+                            <rect x="2" y="6" width="14" height="12" rx="2"
+                            ></rect>
+                        </svg>
+                        <span>Watch demo</span>
+                    </button>
+                </div>
+            </div>
+            <Terminal />
+        </div>
+    </div>
+</section>

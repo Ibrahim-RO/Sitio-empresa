@@ -1,7 +1,41 @@
 ---
+import HeroImage from '../components/home/HeroImage.astro';
+import Projects from '../components/home/Projects.astro';
+import { Reviews } from '../components/home/Reviews';
+import Tecnhologies from '../components/home/Tecnhologies';
+import Card from '../components/ui/Card';
+import { projects } from '../data/projects';
 import Layout from '../layouts/Layout.astro';
+
+const projectsData = projects.slice(0, 3)
 ---
 
 <Layout title='Inicio'>
-	<h1>Hola mundo</h1>
+	<HeroImage />
+
+	<div>
+		<section class="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5">
+			{projectsData.map(item => (
+				<Card data={item}/>
+			))}
+		</section>
+
+		<Reviews client:only="react" />
+		<Tecnhologies client:only="react" />
+
+		<section class="py-32 relative text-center px-6">
+			<div class="absolute inset-0 bg-linear-to-t from-blue-900/20 to-transparent pointer-events-none"></div>
+			<div class="max-w-3xl mx-auto relative z-10">
+				<h2 class="text-4xl md:text-6xl font-bold text-white mb-6">¿Listo para innovar?</h2>
+				<p class="text-xl text-slate-400 mb-10">No dejes que tu competencia se adelante. Construyamos hoy la tecnología de mañana.</p>
+				<div class="flex flex-col sm:flex-row gap-4 justify-center">
+					<button class="px-10 py-5 bg-white text-black font-bold rounded-full text-lg hover:scale-105 transition-transform shadow-[0_0_40px_rgba(255,255,255,0.2)] cursor-pointer">
+						Hablar con un Experto
+					</button>
+				</div>
+			</div>
+		</section>
+	</div>
+
 </Layout>
+
