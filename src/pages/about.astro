@@ -7,9 +7,7 @@ import { Picture } from "astro:assets";
 ---
 
 <Layout title="Nosotros">
-    <!-- HERO -->
-    <section class="relative w-full h-64 md:h-80 lg:h-105 overflow-hidden">
-        <!-- Imagen móvil -->
+    <section class="relative w-full h-64 md:h-72 lg:h-80 overflow-hidden">
         <Picture
             src={bannerMovil}
             alt="Sobre TriCode Studio"
@@ -17,7 +15,6 @@ import { Picture } from "astro:assets";
             class="w-full h-full md:hidden object-cover"
         />
 
-        <!-- Imagen desktop -->
         <Picture
             src={bannerDesktop}
             alt="Sobre TriCode Studio"
@@ -25,33 +22,22 @@ import { Picture } from "astro:assets";
             class="w-full h-full hidden md:block object-cover"
         />
 
-        <!-- Overlay -->
-        <div
-            class="absolute inset-0 bg-linear-to-t from-black/70 via-black/30 to-black/40"
-        >
-        </div>
+        <div class="absolute inset-0 bg-linear-to-t from-black/70 via-black/30 to-black/40"></div>
 
-        <!-- Texto -->
-        <div
-            class="absolute inset-0 flex flex-col items-center justify-center text-center px-6"
-        >
-            <span class="text-xs tracking-widest uppercase text-blue-400 mb-3">
+        <div class="absolute inset-0 flex flex-col items-center justify-center text-center px-6">
+            <span class="text-sm tracking-widest uppercase font-semibold text-blue-300 mb-3">
                 Nuestra esencia
             </span>
 
-            <h1
-                class="text-white text-2xl md:text-4xl font-extrabold tracking-tight"
-            >
+            <h1 class="text-white text-2xl md:text-4xl font-extrabold tracking-tight uppercase">
                 ¿Quiénes somos?
             </h1>
 
-            <div class="mt-4 h-px w-16 bg-blue-500/60"></div>
+            <div class="mt-4 h-1 w-20 bg-blue-400/60"></div>
         </div>
     </section>
 
-    <!-- CONTENT -->
     <section class="max-w-7xl mx-auto px-6 py-24 space-y-28">
-        <!-- IDENTIDAD -->
         <section class="grid grid-cols-1 lg:grid-cols-3 gap-12 items-start">
             <h2 class="text-2xl sm:text-3xl font-bold text-center lg:text-left">
                 Quiénes somos
@@ -75,7 +61,6 @@ import { Picture } from "astro:assets";
             </div>
         </section>
 
-        <!-- MISIÓN & VISIÓN -->
         <section class="grid grid-cols-1 md:grid-cols-2 gap-10">
             <div
                 class="p-8 rounded-2xl border border-white/10 bg-white/5 backdrop-blur"
@@ -109,7 +94,6 @@ import { Picture } from "astro:assets";
             </div>
         </section>
 
-        <!-- OBJETIVOS -->
         <section class="space-y-12">
             <h2 class="text-2xl sm:text-3xl font-bold">
                 Objetivos estratégicos
@@ -137,7 +121,6 @@ import { Picture } from "astro:assets";
             </ul>
         </section>
 
-        <!-- VALORES -->
         <section class="space-y-12">
             <h2 class="text-2xl sm:text-3xl font-bold">Nuestros valores</h2>
 

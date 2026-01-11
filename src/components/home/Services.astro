@@ -1,0 +1,104 @@
+---
+import { Brain, Cloud, Cpu, Globe, Smartphone, Zap } from "lucide-react";
+import SpotlightCard from "../ui/SpotlightCard.astro";
+---
+
+<section
+	id="services"
+	class="relative py-24 text-slate-800 overflow-hidden"
+>
+	<!-- Grid decorativo sutil -->
+	<div class="absolute inset-0 cyber-grid opacity-[0.05] pointer-events-none"></div>
+
+	<div class="max-w-7xl mx-auto px-6 relative z-10">
+		<!-- Header -->
+		<div class="text-center mb-16">
+			<h2 class="text-3xl md:text-5xl font-extrabold text-slate-900 mb-4">
+				Nuestro Arsenal
+			</h2>
+			<p class="text-slate-500 max-w-2xl mx-auto text-lg">
+				Tecnologías punteras para problemas modernos.
+				Construimos soluciones, no plantillas.
+			</p>
+		</div>
+
+		<div class="grid grid-cols-1 md:grid-cols-3 gap-6 auto-rows-auto">
+
+			<!-- Large Card -->
+			<SpotlightCard class="relative md:col-span-2 flex flex-col justify-center group min-h-75 bg-white border border-slate-200/70 rounded-2xl shadow-sm hover:shadow-lg transition-shadow">
+				<div class="absolute top-0 right-0 p-6 opacity-10 group-hover:opacity-20 transition-opacity hidden sm:block text-blue-500">
+					<Globe size={120} />
+				</div>
+
+				<div class="flex flex-col gap-4 px-6">
+					<div class="bg-blue-500/10 w-12 h-12 rounded-xl flex items-center justify-center text-blue-600 shadow-[0_0_20px_rgba(59,130,246,0.25)]">
+						<Globe size={24} />
+					</div>
+
+					<h3 class="text-2xl font-bold text-slate-900">
+						Desarrollo Web Full-Stack
+					</h3>
+
+					<p class="text-slate-600 max-w-xl leading-relaxed">
+						Plataformas web progresivas (PWA), SPAs ultrarrápidas y sistemas empresariales.
+						React, Node.js y arquitecturas escalables desde el día uno.
+					</p>
+				</div>
+			</SpotlightCard>
+
+			<!-- Mobile Apps -->
+			<SpotlightCard class="flex flex-col justify-center gap-4 min-h-75 p-6 bg-white border border-slate-200/70 rounded-2xl shadow-sm hover:shadow-lg transition-shadow">
+				<div class="bg-blue-500/10 w-12 h-12 rounded-xl flex items-center justify-center text-blue-600 shadow-[0_0_20px_rgba(59,130,246,0.25)]">
+					<Smartphone size={24} />
+				</div>
+
+				<h3 class="text-xl font-bold text-slate-900">
+					Apps Móviles
+				</h3>
+
+				<p class="text-slate-600">
+					iOS y Android nativo o multiplataforma. Interfaces fluidas, rápidas y precisas.
+				</p>
+			</SpotlightCard>
+
+			<!-- Cloud -->
+			<SpotlightCard class="flex flex-col justify-center gap-4 min-h-75 p-6 bg-white border border-slate-200/70 rounded-2xl shadow-sm hover:shadow-lg transition-shadow">
+				<div class="bg-blue-500/10 w-12 h-12 rounded-xl flex items-center justify-center text-blue-600 shadow-[0_0_20px_rgba(59,130,246,0.25)]">
+					<Cloud size={24} />
+				</div>
+
+				<h3 class="text-xl font-bold text-slate-900">
+					Cloud & DevOps
+				</h3>
+
+				<p class="text-slate-600">
+					AWS, Azure y Google Cloud. CI/CD, Docker y seguridad lista para escalar.
+				</p>
+			</SpotlightCard>
+
+			<!-- AI -->
+			<SpotlightCard class="relative md:col-span-2 flex flex-col justify-center group min-h-75 bg-white border border-slate-200/70 rounded-2xl shadow-sm hover:shadow-lg transition-shadow">
+				<div class="absolute top-0 right-0 p-6 opacity-10 group-hover:opacity-20 transition-opacity hidden sm:block text-blue-500">
+					<Cpu size={120} />
+				</div>
+
+				<div class="flex flex-col gap-4 px-6">
+					<div class="bg-blue-500/10 w-12 h-12 rounded-xl flex items-center justify-center text-blue-600 gap-1 shadow-[0_0_20px_rgba(59,130,246,0.25)]">
+						<Brain size={20} />
+						<Zap size={20} />
+					</div>
+
+					<h3 class="text-2xl font-bold text-slate-900">
+						IA & Machine Learning
+					</h3>
+
+					<p class="text-slate-600 max-w-xl leading-relaxed">
+						Integración de LLMs, análisis predictivo y automatización inteligente
+						para optimizar procesos de negocio.
+					</p>
+				</div>
+			</SpotlightCard>
+
+		</div>
+	</div>
+</section>

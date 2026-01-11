@@ -38,7 +38,7 @@ export function Reviews() {
                 >
                     {reviews.map((review, i) => (
                         <div key={i} className="min-w-full px-2">
-                            <div className="shadow border  rounded-2xl p-8 
+                            <div className="border border-slate-300 rounded-2xl p-8 
                               max-w-xl mx-auto text-center transition">
 
                                 <div className="flex justify-center gap-1 mb-4">
@@ -77,7 +77,7 @@ export function Reviews() {
                      bg-white/10 hover:bg-white/20 
                      rounded-full p-2 transition"
                 >
-                    <ChevronLeft className="text-white" />
+                    <ChevronLeft className="text-black" />
                 </button>
 
                 <button
@@ -86,7 +86,7 @@ export function Reviews() {
                      bg-white/10 hover:bg-white/20 
                      rounded-full p-2 transition"
                 >
-                    <ChevronRight className="text-white" />
+                    <ChevronRight className="text-black" />
                 </button>
             </div>
 
