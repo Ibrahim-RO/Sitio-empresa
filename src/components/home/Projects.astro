@@ -5,20 +5,20 @@ import Card from "../ui/Card";
 const projectsData = projects.slice(0, 3)
 ---
 
-<section class="space-y-10 py-16">
+<section class="space-y-10 py-16 text-white">
     <article class="text-center max-w-3xl mx-auto mb-20">
         <h3 class="text-4xl md:text-5xl font-bold mb-6">
             Proyectos Destacados
         </h3>
-        <p class="text-lg md:text-xl text-slate-400">
+        <p class="text-lg md:text-xl text-slate-300">
             Experiencias digitales diseñadas para destacar marcas, optimizar
             procesos y generar resultados reales.
         </p>
     </article>
 
-    <article>
+    <article class="flex justify-center items-center">
         <section
-            class="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5"
+            class="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-16"
         >
             {
                 projectsData.map((item) => (
@@ -31,11 +31,10 @@ const projectsData = projects.slice(0, 3)
     <div class="text-center">
         <a
             href="/projects"
-            class="group relative inline-flex items-center gap-2 px-6 py-3 text-blue-400 font-medium text-sm rounded-full border border-blue-500/30 transition-all duration-300 hover:border-blue-400 hover:bg-blue-500/10"
+            class="group relative inline-flex items-center gap-2 px-6 py-3 text-blue-300 font-medium text-sm rounded-full border border-blue-400/30 transition-all duration-300 hover:border-blue-400 hover:bg-blue-500/10"
         >
             <span>Ver más</span>
 
-            <!-- Flecha -->
             <svg
                 class="w-4 h-4 transition-transform duration-300 group-hover:translate-x-1"
                 fill="none"

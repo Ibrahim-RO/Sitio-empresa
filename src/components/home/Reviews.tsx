@@ -19,13 +19,13 @@ export function Reviews() {
     }, [])
 
     return (
-        <section className="max-w-5xl mx-auto px-4 py-20">
+        <section className="max-w-5xl mx-auto px-4 py-20 text-white">
             {/* Header */}
             <div className="text-center mb-14">
                 <h2 className="text-3xl md:text-4xl font-bold mb-4">
                     Lo que dicen nuestros clientes
                 </h2>
-                <p className="text-slate-700 max-w-2xl mx-auto">
+                <p className="text-slate-300 max-w-2xl mx-auto">
                     Empresas que confiaron en nosotros y escalaron su negocio con tecnología de alto nivel.
                 </p>
             </div>
@@ -74,19 +74,19 @@ export function Reviews() {
                 <button
                     onClick={prev}
                     className="absolute left-0 top-1/2 -translate-y-1/2 
-                     bg-white/10 hover:bg-white/20 
+                     bg-white/20 hover:bg-white/30 cursor-pointer 
                      rounded-full p-2 transition"
                 >
-                    <ChevronLeft className="text-black" />
+                    <ChevronLeft />
                 </button>
 
                 <button
                     onClick={next}
                     className="absolute right-0 top-1/2 -translate-y-1/2 
-                     bg-white/10 hover:bg-white/20 
+                     bg-white/20 hover:bg-white/30  cursor-pointer
                      rounded-full p-2 transition"
                 >
-                    <ChevronRight className="text-black" />
+                    <ChevronRight />
                 </button>
             </div>
 
@@ -96,7 +96,7 @@ export function Reviews() {
                     <button
                         key={i}
                         onClick={() => setIndex(i)}
-                        className={`w-2.5 h-2.5 rounded-full transition ${index === i ? "bg-white" : "bg-white/30"
+                        className={`w-2.5 h-2.5 rounded-full transition cursor-pointer ${index === i ? "bg-white" : "bg-white/30"
                             }`}
                     />
                 ))}
