@@ -3,35 +3,46 @@ import { Brain, Cloud, Cpu, Globe, Smartphone, Zap } from "lucide-react";
 import SpotlightCard from "../ui/SpotlightCard.astro";
 ---
 
-<section
-	id="services"
-	class="relative py-24 overflow-hidden text-white"
->
-	<!-- Grid decorativo sutil -->
-	<div class="absolute inset-0 cyber-grid opacity-[0.05] pointer-events-none"></div>
+<section id="services" class="relative py-24 overflow-hidden text-white">
+	<div class="absolute inset-0 cyber-grid opacity-[0.05] pointer-events-none">
+	</div>
 
 	<div class="max-w-7xl mx-auto px-6 relative z-10">
 		<!-- Header -->
 		<div class="text-center mb-16">
-			<h2 class="text-3xl md:text-5xl font-extrabold mb-4">
+			<h2
+				data-aos="fade-up"
+				class="text-3xl md:text-5xl font-extrabold mb-4"
+			>
 				Nuestro Arsenal
 			</h2>
-			<p class="text-slate-500 max-w-2xl mx-auto text-lg">
-				Tecnologías punteras para problemas modernos.
-				Construimos soluciones, no plantillas.
+
+			<p
+				data-aos="fade-up"
+				data-aos-delay="100"
+				class="text-slate-500 max-w-2xl mx-auto text-lg"
+			>
+				Tecnologías punteras para problemas modernos. Construimos
+				soluciones, no plantillas.
 			</p>
 		</div>
 
 		<div class="grid grid-cols-1 md:grid-cols-3 gap-6 auto-rows-auto">
-
-			<!-- Large Card -->
-			<SpotlightCard class="relative md:col-span-2 flex flex-col justify-center group min-h-75 bg-white border border-slate-200/70 rounded-2xl shadow-sm hover:shadow-lg transition-shadow">
-				<div class="absolute top-0 right-0 p-6 opacity-10 group-hover:opacity-20 transition-opacity hidden sm:block text-blue-300">
+			<!-- Large Web Card -->
+			<SpotlightCard
+				data-aos="fade-right"
+				class="relative md:col-span-2 flex flex-col justify-center group min-h-75 bg-white border border-slate-200/70 rounded-2xl shadow-sm hover:shadow-lg transition-shadow"
+			>
+				<div
+					class="absolute top-0 right-0 p-6 opacity-10 group-hover:opacity-20 transition-opacity hidden sm:block text-blue-300"
+				>
 					<Globe size={120} />
 				</div>
 
 				<div class="flex flex-col gap-4 px-6">
-					<div class="bg-white-500/10 w-12 h-12 rounded-xl flex items-center justify-center text-blue-600 shadow-[0_0_20px_rgba(59,130,246,0.25)]">
+					<div
+						class="bg-white-500/10 w-12 h-12 rounded-xl flex items-center justify-center text-blue-600 shadow-[0_0_20px_rgba(59,130,246,0.25)]"
+					>
 						<Globe size={24} />
 					</div>
 
@@ -40,65 +51,81 @@ import SpotlightCard from "../ui/SpotlightCard.astro";
 					</h3>
 
 					<p class="text-slate-300 max-w-xl leading-relaxed">
-						Plataformas web progresivas (PWA), SPAs ultrarrápidas y sistemas empresariales.
-						React, Node.js y arquitecturas escalables desde el día uno.
+						Plataformas web progresivas (PWA), SPAs ultrarrápidas y
+						sistemas empresariales. React, Node.js y arquitecturas
+						escalables desde el día uno.
 					</p>
 				</div>
 			</SpotlightCard>
 
-			<!-- Mobile Apps -->
-			<SpotlightCard class="flex flex-col justify-center gap-4 min-h-75 p-6 bg-white border border-slate-200/70 rounded-2xl shadow-sm hover:shadow-lg transition-shadow">
-				<div class="bg-blue-500/10 w-12 h-12 rounded-xl flex items-center justify-center text-blue-300 shadow-[0_0_20px_rgba(59,130,246,0.25)]">
+			<!-- Mobile -->
+			<SpotlightCard
+				data-aos="fade-up"
+				data-aos-delay="100"
+				class="flex flex-col justify-center gap-4 min-h-75 p-6 bg-white border border-slate-200/70 rounded-2xl shadow-sm hover:shadow-lg transition-shadow"
+			>
+				<div
+					class="bg-blue-500/10 w-12 h-12 rounded-xl flex items-center justify-center text-blue-300 shadow-[0_0_20px_rgba(59,130,246,0.25)]"
+				>
 					<Smartphone size={24} />
 				</div>
 
-				<h3 class="text-xl font-bold ">
-					Apps Móviles
-				</h3>
+				<h3 class="text-xl font-bold">Apps Móviles</h3>
 
 				<p class="text-slate-300">
-					iOS y Android nativo o multiplataforma. Interfaces fluidas, rápidas y precisas.
+					iOS y Android nativo o multiplataforma. Interfaces fluidas,
+					rápidas y precisas.
 				</p>
 			</SpotlightCard>
 
 			<!-- Cloud -->
-			<SpotlightCard class="flex flex-col justify-center gap-4 min-h-75 p-6 bg-white border border-slate-200/70 rounded-2xl shadow-sm hover:shadow-lg transition-shadow">
-				<div class="bg-blue-500/10 w-12 h-12 rounded-xl flex items-center justify-center text-blue-600 shadow-[0_0_20px_rgba(59,130,246,0.25)]">
+			<SpotlightCard
+				data-aos="fade-up"
+				data-aos-delay="200"
+				class="flex flex-col justify-center gap-4 min-h-75 p-6 bg-white border border-slate-200/70 rounded-2xl shadow-sm hover:shadow-lg transition-shadow"
+			>
+				<div
+					class="bg-blue-500/10 w-12 h-12 rounded-xl flex items-center justify-center text-blue-600 shadow-[0_0_20px_rgba(59,130,246,0.25)]"
+				>
 					<Cloud size={24} />
 				</div>
 
-				<h3 class="text-xl font-bold mt-5">
-					Cloud & DevOps
-				</h3>
+				<h3 class="text-xl font-bold mt-5">Cloud & DevOps</h3>
 
 				<p class="text-slate-300 mt-3">
-					AWS, Azure y Google Cloud. CI/CD, Docker y seguridad lista para escalar.
+					AWS, Azure y Google Cloud. CI/CD, Docker y seguridad lista
+					para escalar.
 				</p>
 			</SpotlightCard>
 
 			<!-- AI -->
-			<SpotlightCard class="relative md:col-span-2 flex flex-col justify-center group min-h-75 bg-white border border-slate-200/70 rounded-2xl shadow-sm hover:shadow-lg transition-shadow">
-				<div class="absolute top-0 right-0 p-6 opacity-10 group-hover:opacity-20 transition-opacity hidden sm:block text-blue-500">
+			<SpotlightCard
+				data-aos="fade-left"
+				class="relative md:col-span-2 flex flex-col justify-center group min-h-75 bg-white border border-slate-200/70 rounded-2xl shadow-sm hover:shadow-lg transition-shadow"
+			>
+				<div
+					class="absolute top-0 right-0 p-6 opacity-10 group-hover:opacity-20 transition-opacity hidden sm:block text-blue-500"
+				>
 					<Cpu size={120} />
 				</div>
 
 				<div class="flex flex-col gap-4 px-6">
-					<div class="bg-blue-500/10 w-12 h-12 rounded-xl flex items-center justify-center text-blue-600 gap-1 shadow-[0_0_20px_rgba(59,130,246,0.25)]">
+					<div
+						class="bg-blue-500/10 w-12 h-12 rounded-xl flex items-center justify-center text-blue-600 gap-1 shadow-[0_0_20px_rgba(59,130,246,0.25)]"
+					>
 						<Brain size={20} />
 						<Zap size={20} />
 					</div>
 
-					<h3 class="text-2xl font-bold">
-						IA & Machine Learning
-					</h3>
+					<h3 class="text-2xl font-bold">IA & Machine Learning</h3>
 
 					<p class="text-slate-300 max-w-xl leading-relaxed">
-						Integración de LLMs, análisis predictivo y automatización inteligente
-						para optimizar procesos de negocio.
+						Integración de LLMs, análisis predictivo y
+						automatización inteligente para optimizar procesos de
+						negocio.
 					</p>
 				</div>
 			</SpotlightCard>
-
 		</div>
 	</div>
 </section>

@@ -1,6 +1,8 @@
 import { useEffect, useState } from "react"
 import { Star, ChevronLeft, ChevronRight } from "lucide-react"
 import { reviews } from "../../data/reviews"
+import AOS from "aos"
+import "aos/dist/aos.css"
 
 export function Reviews() {
     const [index, setIndex] = useState(0)
@@ -14,14 +16,30 @@ export function Reviews() {
     }
 
     useEffect(() => {
+        AOS.init({
+            duration: 800,
+            easing: "ease-out-cubic",
+            once: true,
+            offset: 80,
+        })
+    }, [])
+
+    useEffect(() => {
         const interval = setInterval(next, 5000)
         return () => clearInterval(interval)
     }, [])
 
     return (
-        <section className="max-w-5xl mx-auto px-4 py-20 text-white">
+        <section
+            data-aos="fade-up"
+            className="max-w-5xl mx-auto px-4 py-20 text-white"
+        >
             {/* Header */}
-            <div className="text-center mb-14">
+            <div
+                data-aos="fade-up"
+                data-aos-delay="100"
+                className="text-center mb-14"
+            >
                 <h2 className="text-3xl md:text-4xl font-bold mb-4">
                     Lo que dicen nuestros clientes
                 </h2>
@@ -31,7 +49,11 @@ export function Reviews() {
             </div>
 
             {/* Carousel */}
-            <div className="relative overflow-hidden">
+            <div
+                data-aos="fade-up"
+                data-aos-delay="200"
+                className="relative overflow-hidden"
+            >
                 <div
                     className="flex transition-transform duration-500 ease-in-out"
                     style={{ transform: `translateX(-${index * 100}%)` }}
@@ -39,7 +61,7 @@ export function Reviews() {
                     {reviews.map((review, i) => (
                         <div key={i} className="min-w-full px-2">
                             <div className="border border-slate-300 rounded-2xl p-8 
-                              max-w-xl mx-auto text-center transition">
+                max-w-xl mx-auto text-center transition">
 
                                 <div className="flex justify-center gap-1 mb-4">
                                     {Array.from({ length: 5 }).map((_, s) => (
@@ -55,12 +77,10 @@ export function Reviews() {
                                     ))}
                                 </div>
 
-                                {/* Comment */}
                                 <p className="mb-6 leading-relaxed">
                                     “{review.comment}”
                                 </p>
 
-                                {/* User */}
                                 <div>
                                     <p className="font-semibold">{review.name}</p>
                                     <p className="text-sm">{review.role}</p>
@@ -74,8 +94,8 @@ export function Reviews() {
                 <button
                     onClick={prev}
                     className="absolute left-0 top-1/2 -translate-y-1/2 
-                     bg-white/20 hover:bg-white/30 cursor-pointer 
-                     rounded-full p-2 transition"
+            bg-white/20 hover:bg-white/30 cursor-pointer 
+            rounded-full p-2 transition"
                 >
                     <ChevronLeft />
                 </button>
@@ -83,15 +103,19 @@ export function Reviews() {
                 <button
                     onClick={next}
                     className="absolute right-0 top-1/2 -translate-y-1/2 
-                     bg-white/20 hover:bg-white/30  cursor-pointer
-                     rounded-full p-2 transition"
+            bg-white/20 hover:bg-white/30 cursor-pointer
+            rounded-full p-2 transition"
                 >
                     <ChevronRight />
                 </button>
             </div>
 
             {/* Dots */}
-            <div className="flex justify-center gap-2 mt-6">
+            <div
+                data-aos="fade-up"
+                data-aos-delay="300"
+                className="flex justify-center gap-2 mt-6"
+            >
                 {reviews.map((_, i) => (
                     <button
                         key={i}

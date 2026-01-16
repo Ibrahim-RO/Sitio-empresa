@@ -23,64 +23,98 @@ import { Picture } from "astro:assets";
             class="absolute inset-0 w-full h-full object-cover hidden md:block"
         />
 
-        <!-- Overlay -->
+        <!-- Overlay mejorado -->
         <div
-            class="absolute inset-0 bg-gradient-to-br from-black/80 via-black/60 to-blue-900/40"
+            class="absolute inset-0 bg-linear-to-br from-black/85 via-black/65 to-blue-900/45"
         >
         </div>
         <div class="absolute inset-0 backdrop-blur-[2px]"></div>
+
+        <!-- Efecto de grid sutil -->
+        <div
+            class="absolute inset-0 opacity-10"
+            style="background-image: linear-gradient(rgba(59, 130, 246, 0.1) 1px, transparent 1px), linear-gradient(90deg, rgba(59, 130, 246, 0.1) 1px, transparent 1px); background-size: 50px 50px;"
+        >
+        </div>
 
         <div
             class="relative z-10 h-full flex flex-col items-center justify-center text-center px-6"
         >
             <span
-                class="text-xs tracking-[0.35em] uppercase text-blue-400 mb-5"
+                class="text-xs tracking-[0.35em] uppercase text-blue-400 mb-5 font-medium"
+                data-aos="fade-down"
+                data-aos-duration="800"
             >
                 TriCode Studio
             </span>
 
             <h1
-                class="text-white text-3xl md:text-5xl font-extrabold tracking-tight"
+                class="text-white text-3xl md:text-5xl lg:text-6xl font-extrabold tracking-tight"
+                data-aos="fade-up"
+                data-aos-duration="1000"
+                data-aos-delay="200"
             >
                 Creamos software
-                <span class="block text-blue-400"> que impulsa negocios </span>
+                <span class="block text-blue-400 mt-2">
+                    que impulsa negocios
+                </span>
             </h1>
 
-            <p class="mt-6 max-w-xl text-white/80 text-base md:text-lg">
+            <p
+                class="mt-6 max-w-2xl text-white/80 text-base md:text-lg leading-relaxed"
+                data-aos="fade-up"
+                data-aos-duration="1000"
+                data-aos-delay="400"
+            >
                 Ingeniería, diseño y visión estratégica para construir
                 soluciones digitales modernas, seguras y escalables.
             </p>
 
-            <div class="mt-10 h-px w-24 bg-blue-400/60"></div>
+            <div
+                class="mt-10 h-px w-24 bg-linear-to-r from-transparent via-blue-400/60 to-transparent"
+                data-aos="fade"
+                data-aos-duration="1000"
+                data-aos-delay="600"
+            >
+            </div>
         </div>
     </section>
 
     <!-- CONTENIDO -->
-    <section class="max-w-7xl mx-auto px-6 py-24 space-y-32">
+    <section class="max-w-7xl mx-auto px-6 py-24 space-y-32 text-white">
         <!-- QUIÉNES SOMOS -->
         <section class="grid grid-cols-1 lg:grid-cols-3 gap-12 items-start">
-            <div class="relative">
-                <h2 class="text-3xl sm:text-4xl font-bold">
+            <div class="relative" data-aos="fade-right" data-aos-duration="800">
+                <h2
+                    class="text-3xl sm:text-4xl lg:text-5xl font-bold leading-tight"
+                >
                     Quiénes
-                    <span class="block text-blue-500">somos</span>
+                    <span class="block text-blue-500 mt-1">somos</span>
                 </h2>
 
                 <span
-                    class="absolute -left-6 top-2 h-16 w-1 bg-blue-500/60 rounded"
+                    class="absolute -left-6 top-2 h-16 w-1 bg-linear-to-b from-blue-500 to-blue-500/20 rounded"
                 ></span>
             </div>
 
             <div
                 class="lg:col-span-2 space-y-6 text-muted-foreground text-lg leading-relaxed"
+                data-aos="fade-left"
+                data-aos-duration="800"
+                data-aos-delay="200"
             >
-                <p>
+                <p
+                    class="text-white/70 hover:text-white/90 transition-colors duration-300"
+                >
                     TriCode Studio es una agencia de desarrollo de software
                     especializada en crear soluciones digitales a medida para
                     empresas que buscan eficiencia, innovación y crecimiento
                     sostenido.
                 </p>
 
-                <p>
+                <p
+                    class="text-white/70 hover:text-white/90 transition-colors duration-300"
+                >
                     Integramos ingeniería sólida, diseño funcional y visión de
                     negocio para construir plataformas modernas, seguras y
                     listas para escalar a largo plazo.
@@ -91,13 +125,19 @@ import { Picture } from "astro:assets";
         <!-- MISIÓN / VISIÓN -->
         <section class="grid grid-cols-1 md:grid-cols-2 gap-10">
             <div
-                class="group p-10 rounded-3xl border border-white/10 bg-white/5 backdrop-blur hover:bg-white/10 transition"
+                class="group p-10 rounded-3xl border border-white/10 bg-white/5 backdrop-blur hover:bg-white/10 hover:border-blue-500/30 transition-all duration-500 hover:shadow-xl hover:shadow-blue-500/10"
+                data-aos="fade-up"
+                data-aos-duration="800"
             >
-                <span class="text-blue-400 text-sm uppercase tracking-widest">
+                <span
+                    class="text-blue-400 text-sm uppercase tracking-widest font-semibold"
+                >
                     Misión
                 </span>
 
-                <h3 class="mt-4 text-xl font-semibold">
+                <h3
+                    class="mt-4 text-xl font-semibold text-white group-hover:text-blue-400 transition-colors duration-300"
+                >
                     Transformar desafíos en soluciones
                 </h3>
 
@@ -107,16 +147,28 @@ import { Picture } from "astro:assets";
                     objetivos estratégicos, aplicando tecnologías modernas y
                     buenas prácticas de ingeniería.
                 </p>
+
+                <div
+                    class="mt-6 h-1 w-0 group-hover:w-full bg-linear-to-r from-blue-500 to-blue-400 transition-all duration-700 rounded"
+                >
+                </div>
             </div>
 
             <div
-                class="group p-10 rounded-3xl border border-white/10 bg-white/5 backdrop-blur hover:bg-white/10 transition"
+                class="group p-10 rounded-3xl border border-white/10 bg-white/5 backdrop-blur hover:bg-white/10 hover:border-blue-500/30 transition-all duration-500 hover:shadow-xl hover:shadow-blue-500/10"
+                data-aos="fade-up"
+                data-aos-duration="800"
+                data-aos-delay="200"
             >
-                <span class="text-blue-400 text-sm uppercase tracking-widest">
+                <span
+                    class="text-blue-400 text-sm uppercase tracking-widest font-semibold"
+                >
                     Visión
                 </span>
 
-                <h3 class="mt-4 text-xl font-semibold">
+                <h3
+                    class="mt-4 text-xl font-semibold text-white group-hover:text-blue-400 transition-colors duration-300"
+                >
                     Ser un referente en desarrollo de software
                 </h3>
 
@@ -124,12 +176,21 @@ import { Picture } from "astro:assets";
                     Acompañar a empresas en su transformación digital con
                     soluciones confiables, sólidas y duraderas de alto impacto.
                 </p>
+
+                <div
+                    class="mt-6 h-1 w-0 group-hover:w-full bg-linear-to-r from-blue-500 to-blue-400 transition-all duration-700 rounded"
+                >
+                </div>
             </div>
         </section>
 
         <!-- OBJETIVOS -->
         <section class="space-y-12">
-            <h2 class="text-3xl sm:text-4xl font-bold">
+            <h2
+                class="text-3xl sm:text-4xl lg:text-5xl font-bold"
+                data-aos="fade-up"
+                data-aos-duration="800"
+            >
                 Objetivos estratégicos
             </h2>
 
@@ -138,18 +199,25 @@ import { Picture } from "astro:assets";
             >
                 {
                     objetivos.map((item, index) => (
-                        <li class="relative">
-                            <span class="absolute -left-[22px] top-1 w-10 h-10 rounded-full bg-blue-500/10 border border-blue-500 flex items-center justify-center text-blue-400 font-mono">
+                        <li
+                            class="relative group"
+                            data-aos="fade-up"
+                            data-aos-duration="800"
+                            data-aos-delay={index * 100}
+                        >
+                            <span class="absolute -left-5.5 top-1 w-10 h-10 rounded-full bg-blue-500/10 border-2 border-blue-500 flex items-center justify-center text-blue-400 font-mono text-sm font-bold group-hover:bg-blue-500 group-hover:text-white group-hover:scale-110 transition-all duration-300">
                                 {String(index + 1).padStart(2, "0")}
                             </span>
 
-                            <h4 class="text-lg font-semibold mb-2">
-                                {item.title}
-                            </h4>
+                            <div class="group-hover:translate-x-2 transition-transform duration-300">
+                                <h4 class="text-lg font-semibold mb-2 text-white group-hover:text-blue-400 transition-colors duration-300">
+                                    {item.title}
+                                </h4>
 
-                            <p class="text-muted-foreground leading-relaxed">
-                                {item.text}
-                            </p>
+                                <p class="text-muted-foreground leading-relaxed">
+                                    {item.text}
+                                </p>
+                            </div>
                         </li>
                     ))
                 }
@@ -158,15 +226,26 @@ import { Picture } from "astro:assets";
 
         <!-- VALORES -->
         <section class="space-y-12">
-            <h2 class="text-3xl sm:text-4xl font-bold">Nuestros valores</h2>
+            <h2
+                class="text-3xl sm:text-4xl lg:text-5xl font-bold"
+                data-aos="fade-up"
+                data-aos-duration="800"
+            >
+                Nuestros valores
+            </h2>
 
             <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
                 {
-                    valores.map((item) => (
-                        <div class="p-8 rounded-2xl border border-white/10 bg-white/5 hover:bg-white/10 transition">
-                            <span class="block h-1 w-12 bg-blue-500 rounded mb-6" />
+                    valores.map((item, index) => (
+                        <div
+                            class="group p-8 rounded-2xl border border-white/10 bg-white/5 hover:bg-white/10 hover:border-blue-500/30 transition-all duration-500 hover:shadow-lg hover:shadow-blue-500/10 hover:-translate-y-1"
+                            data-aos="fade-up"
+                            data-aos-duration="800"
+                            data-aos-delay={index * 100}
+                        >
+                            <span class="block h-1 w-12 bg-blue-500 rounded mb-6 group-hover:w-20 transition-all duration-500" />
 
-                            <h4 class="text-lg font-semibold mb-3">
+                            <h4 class="text-lg font-semibold mb-3 text-white group-hover:text-blue-400 transition-colors duration-300">
                                 {item.title}
                             </h4>
 
@@ -180,3 +259,5 @@ import { Picture } from "astro:assets";
         </section>
     </section>
 </Layout>
+
+

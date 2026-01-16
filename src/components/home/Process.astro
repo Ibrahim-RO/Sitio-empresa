@@ -1,60 +1,60 @@
 ---
 const steps = [
   {
-    step: '01',
-    title: 'Descubrimiento',
-    desc: 'Analizamos tu negocio, competencia y objetivos técnicos.',
+    step: "01",
+    title: "Descubrimiento",
+    desc: "Analizamos tu negocio, competencia y objetivos técnicos.",
   },
   {
-    step: '02',
-    title: 'Arquitectura',
-    desc: 'Diseñamos la estructura de datos y flujos de usuario.',
+    step: "02",
+    title: "Arquitectura",
+    desc: "Diseñamos la estructura de datos y flujos de usuario.",
   },
   {
-    step: '03',
-    title: 'Desarrollo Ágil',
-    desc: 'Sprints de 2 semanas con entregables funcionales constantes.',
+    step: "03",
+    title: "Desarrollo Ágil",
+    desc: "Sprints de 2 semanas con entregables funcionales constantes.",
   },
   {
-    step: '04',
-    title: 'Lanzamiento',
-    desc: 'Despliegue, monitoreo y escalado automático.',
+    step: "04",
+    title: "Lanzamiento",
+    desc: "Despliegue, monitoreo y escalado automático.",
   },
-]
+];
 ---
 
-<section
-  id="process"
-  class="relative py-24 overflow-hidden text-white"
->
-  <!-- Fondo decorativo -->
-  <div class="absolute inset-0 bg-linear-to-b from-blue-500/5 via-transparent to-transparent pointer-events-none"></div>
+<section id="process" class="relative py-24 overflow-hidden text-white">
+  <div
+    class="absolute inset-0 bg-linear-to-b from-blue-500/5 via-transparent to-transparent pointer-events-none"
+  >
+  </div>
 
   <div class="max-w-7xl mx-auto px-6 relative z-10">
-    <h2 class="text-3xl md:text-4xl font-extrabold mb-14">
+    <h2 data-aos="fade-up" class="text-3xl md:text-4xl font-extrabold mb-14">
       Cómo Trabajamos
     </h2>
 
     <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-8">
-      {steps.map((item) => (
-        <div class="group relative p-6 rounded-2xl bg-white/10 shadow-sm hover:shadow-lg transition-all duration-300">
-          
-          <div class="absolute top-3 right-4 text-6xl font-extrabold text-blue-300/10 select-none group-hover:text-blue-500/20 transition-colors">
-            {item.step}
-          </div>
+      {
+        steps.map((item, index) => (
+          <div
+            data-aos="fade-up"
+            data-aos-delay={index * 120}
+            class="group relative p-6 rounded-2xl bg-white/10 shadow-sm hover:shadow-lg transition-all duration-300"
+          >
+            <div class="absolute top-3 right-4 text-6xl font-extrabold text-blue-300/10 select-none group-hover:text-blue-500/20 transition-colors">
+              {item.step}
+            </div>
 
-          <div class="relative z-10">
-            <h3 class="text-lg font-bold mb-2">
-              {item.title}
-            </h3>
-            <p class="text-sm text-slate-300 leading-relaxed">
-              {item.desc}
-            </p>
-          </div>
+            <div class="relative z-10">
+              <h3 class="text-lg font-bold mb-2">{item.title}</h3>
+              <p class="text-sm text-slate-300 leading-relaxed">{item.desc}</p>
+            </div>
 
-          <span class="absolute bottom-0 left-0 h-0.5 w-0 bg-blue-500 transition-all duration-300 group-hover:w-full"></span>
-        </div>
-      ))}
+            <span class="absolute bottom-0 left-0 h-0.5 w-0 bg-blue-500 transition-all duration-300 group-hover:w-full" />
+          </div>
+        ))
+      }
     </div>
   </div>
 </section>
