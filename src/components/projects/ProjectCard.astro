@@ -1,27 +1,54 @@
 ---
 import { Picture } from "astro:assets";
-import bannerMovil from "../../assets/banner-movil.png";
+
+interface Technology {
+    name: string;
+}
+
+interface Props {
+    title: string;
+    description: string;
+    image: ImageMetadata;
+    technologies: Technology[];
+}
+
+const { title, description, image, technologies } = Astro.props;
 ---
 
-<article class="bg-blue-50 shadow">
-    <Picture
-        src={bannerMovil}
-        alt="Banner contacto"
-        formats={["avif", "webp"]}
-        class="w-full h-60 object-cover object-center"
-    />
-    <div class="p-6 flex-1 flex flex-col">
-        <div class="flex justify-between items-start mb-4">
-            <h3 class={`text-xl font-bold text-black  transition-colors`}>title</h3>
-            <!-- <div class={`bg-slate-800 p-2 rounded-full  transition-colors`}>
-                 <ArrowRight size={16} className="text-slate-400 group-hover:text-white -rotate-45 group-hover:rotate-0 transform duration-300" />
-            </div> -->
-        </div>
-        <p class="text-slate-400 text-sm mb-4 flex-1">description</p>
-        <div class="flex gap-2 flex-wrap">
-            <span class="px-3 py-1 rounded-full bg-blue-500/10 text-blue-400 text-xs font-mono border border-blue-500/20">React</span>
-            <span class="px-3 py-1 rounded-full bg-green-500/10 text-green-400 text-xs font-mono border border-purple-500/20">Node.js</span>
-            <span class="px-3 py-1 rounded-full bg-cyan-500/10 text-cyan-400 text-xs font-mono border border-cyan-500/20">Stripe</span>
+<article
+    class="group relative overflow-hidden rounded-2xl bg-slate-900/80 border border-white/10 backdrop-blur-xl shadow-lg transition-all duration-300 hover:-translate-y-1 hover:shadow-2xl hover:border-blue-500/40"
+>
+    <!-- Imagen -->
+    <div class="relative overflow-hidden">
+        <Picture
+            src={image}
+            alt={`Proyecto ${title}`}
+            formats={["avif", "webp"]}
+            class="w-full h-56 object-cover object-top transition-transform duration-500 group-hover:scale-105"
+        />
+    </div>
+
+    <!-- Contenido -->
+    <div class="relative p-6 flex flex-col h-full">
+        <h3
+            class="text-lg font-bold text-white mb-2 transition-colors group-hover:text-blue-400"
+        >
+            {title}
+        </h3>
+
+        <p class="text-sm text-slate-400 leading-relaxed mb-4 line-clamp-4">
+            {description}
+        </p>
+
+        <!-- Tecnologías -->
+        <div class="mt-auto flex flex-wrap gap-2">
+            {
+                technologies.map((tech) => (
+                    <span class="px-3 py-1 rounded-full bg-blue-500/10 text-blue-400 text-xs font-mono border border-blue-500/20 transition-colors group-hover:bg-blue-500/20">
+                        {tech.name}
+                    </span>
+                ))
+            }
         </div>
     </div>
 </article>

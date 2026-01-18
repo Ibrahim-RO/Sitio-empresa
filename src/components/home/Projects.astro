@@ -1,6 +1,6 @@
 ---
 import { projects } from "../../data/projects";
-import Card from "../ui/Card";
+import ProjectCard from "../projects/ProjectCard.astro";
 
 const projectsData = projects.slice(0, 3);
 ---
@@ -28,9 +28,18 @@ const projectsData = projects.slice(0, 3);
             class="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-16"
         >
             {
-                projectsData.map((item, index) => (
-                    <div data-aos="fade-up" data-aos-delay={index * 150}>
-                        <Card client:only="react" data={item} />
+                projectsData.map((project, index) => (
+                    <div
+                        data-aos="fade-up"
+                        data-aos-duration="800"
+                        data-aos-delay={index * 150}
+                    >
+                        <ProjectCard
+                            title={project.title}
+                            description={project.description}
+                            image={project.image}
+                            technologies={project.technologies}
+                        />
                     </div>
                 ))
             }

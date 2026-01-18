@@ -6,6 +6,8 @@ export default function Header() {
   const [open, setOpen] = useState(false);
   const [openModal, setOpenModal] = useState(false);
 
+  const pathname = window.location.pathname;
+
   const onclose = () => {
     setOpenModal(false)
   }
@@ -36,30 +38,33 @@ export default function Header() {
                   T
                 </div>
                 <span className="text-slate-100 text-lg tracking-tight">
-                  TriCode
+                  DevStack Studio
                 </span>
               </a>
 
               {/* Desktop nav */}
               <nav className="hidden md:flex gap-8">
-                {navItems.map((item) => (
-                  <a
-                    key={item.href}
-                    href={item.href}
-                    className="
-                    relative text-sm font-medium uppercase
-                    text-slate-200
-                    hover:text-sky-400 transition
-                    after:absolute after:left-0 after:-bottom-1
-                    after:h-0.5 after:w-0
-                    after:bg-sky-500
-                    hover:after:w-full after:transition-all
-                  "
-                  >
-                    {item.label}
-                  </a>
-                ))}
+                {navItems.map((item) => {
+                  const isActive = pathname === item.href;
+
+                  return (
+                    <a
+                      key={item.href}
+                      href={item.href}
+                      className={`
+                        relative text-sm font-medium uppercase transition
+                        ${isActive ? "text-sky-400" : "text-slate-200 hover:text-sky-400"}
+                        after:absolute after:left-0 after:-bottom-1
+                        after:h-0.5 after:bg-sky-500 after:transition-all
+                        ${isActive ? "after:w-full" : "after:w-0 hover:after:w-full"}
+                      `}
+                    >
+                      {item.label}
+                    </a>
+                  );
+                })}
               </nav>
+
 
               {/* Desktop CTA */}
               <button
@@ -97,44 +102,24 @@ export default function Header() {
             onClick={() => setOpen(false)}
             className="fixed inset-0 bg-black/50 backdrop-blur-sm md:hidden"
           >
-            <nav
-              onClick={(e) => e.stopPropagation()}
-              className="
-              absolute bottom-0 left-0 right-0
-              bg-[#020617]
-              border-t border-slate-800
-              rounded-t-3xl
-              p-6 flex flex-col gap-5
-              animate-slideUp
-            "
-            >
-              {navItems.map((item) => (
+            {navItems.map((item) => {
+              const isActive = pathname === item.href;
+
+              return (
                 <a
                   key={item.href}
                   href={item.href}
                   onClick={() => setOpen(false)}
-                  className="
-                  text-lg font-medium
-                  text-slate-200
-                  hover:text-sky-400 transition
-                "
+                  className={`
+                    text-lg font-medium transition
+                    ${isActive ? "text-sky-400" : "text-slate-200 hover:text-sky-400"}
+                  `}
                 >
                   {item.label}
                 </a>
-              ))}
+              );
+            })}
 
-              <button
-                onClick={() => setOpenModal(true)}
-                className="
-                mt-2 text-center px-6 py-3 rounded-xl
-                bg-linear-to-r from-sky-500 to-blue-600
-                text-white font-semibold
-                shadow-md shadow-sky-500/30
-              "
-              >
-                Cotizar
-              </button>
-            </nav>
           </div>
         )}
       </header>
