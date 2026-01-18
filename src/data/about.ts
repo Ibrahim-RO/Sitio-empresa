@@ -29,5 +29,9 @@ export const valores = [
     {
         title: "Compromiso",
         text: "Cumplimos lo que prometemos."
+    }, 
+    {
+        title: "Adaptabilidad",
+        text: "Nos ajustamos rápidamente a las necesidades de nuestros clientes, manteniendo flexibilidad sin perder el enfoque en resultados."
     }
 ]

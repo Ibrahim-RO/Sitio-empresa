@@ -54,7 +54,7 @@ export default function ContactForm() {
     }
 
     return (
-        <div>
+        <div className='p-4'>
             <h2 className="text-xl font-bold text-white mb-2">
                 Iniciar Proyecto
             </h2>
@@ -65,7 +65,7 @@ export default function ContactForm() {
             <form
                 ref={formRef}
                 onSubmit={handleSubmit}
-                className="space-y-4 bg-white/15 p-8 rounded-lg"
+                className="space-y-6 rounded-lg"
             >
                 <Input
                     label="Nombre"

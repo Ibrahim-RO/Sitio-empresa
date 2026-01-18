@@ -1,6 +1,6 @@
 ---
-import HeroImage from '../components/home/HeroImage.astro';
-import Innovation from '../components/home/Innovation.astro';
+import HeroImage from '../components/home/HeroImage';
+import Innovation from '../components/home/Innovation';
 import Process from '../components/home/Process.astro';
 import Projects from '../components/home/Projects.astro';
 import { Reviews } from '../components/home/Reviews';
@@ -10,7 +10,7 @@ import Layout from '../layouts/Layout.astro';
 ---
 
 <Layout title="Inicio">
-	<HeroImage />
+	<HeroImage client:only="react" />
 
 	<div class="bg-[#030712]">
 		<Services />
@@ -24,7 +24,7 @@ import Layout from '../layouts/Layout.astro';
 
 	<div class="bg-[#030712]">
 		<Tecnhologies client:only="react" />
-		<Innovation />
+		<Innovation client:only="react" />
 	</div>
 </Layout>
 
