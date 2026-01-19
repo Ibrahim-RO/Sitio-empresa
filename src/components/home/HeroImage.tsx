@@ -29,7 +29,7 @@ export default function HeroImage() {
             <section className="relative overflow-hidden w-full">
                 <div className="max-w-7xl mx-auto grid lg:grid-cols-2 gap-12 items-center relative z-10 px-6">
                     {/* LEFT */}
-                    <div className="space-y-8">
+                    <div className="space-y-8 mt-5">
                         <div
                             data-aos="fade-down"
                             className="inline-flex items-center gap-2 px-3 py-1 rounded-full border border-blue-500/30 bg-blue-500/10 text-blue-400 text-xs font-mono font-bold uppercase tracking-wider"

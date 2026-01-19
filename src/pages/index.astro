@@ -10,7 +10,7 @@ import Layout from '../layouts/Layout.astro';
 ---
 
 <Layout title="Inicio">
-	<HeroImage client:only="react" />
+	<HeroImage client:load />
 
 	<div class="bg-[#030712]">
 		<Services />
@@ -19,7 +19,7 @@ import Layout from '../layouts/Layout.astro';
 
 	<div class="bg-slate-900/30">
 		<Projects />
-		<Reviews client:only="react" />
+		<Reviews client:idle />
 	</div>
 
 	<div class="bg-[#030712]">

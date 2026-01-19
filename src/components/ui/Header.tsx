@@ -97,31 +97,58 @@ export default function Header() {
         </div>
 
         {/* Mobile menu */}
+        {/* Mobile menu */}
         {open && (
           <div
             onClick={() => setOpen(false)}
             className="fixed inset-0 bg-black/50 backdrop-blur-sm md:hidden"
           >
-            {navItems.map((item) => {
-              const isActive = pathname === item.href;
+            <nav
+              onClick={(e) => e.stopPropagation()}
+              className="
+                absolute bottom-0 left-0 right-0
+                bg-[#020617]
+                border-t border-slate-800
+                rounded-t-3xl
+                p-6 flex flex-col gap-5
+                animate-slideUp
+              "
+            >
+              {navItems.map((item) => {
+                const isActive = pathname === item.href;
 
-              return (
-                <a
-                  key={item.href}
-                  href={item.href}
-                  onClick={() => setOpen(false)}
-                  className={`
-                    text-lg font-medium transition
-                    ${isActive ? "text-sky-400" : "text-slate-200 hover:text-sky-400"}
-                  `}
-                >
-                  {item.label}
-                </a>
-              );
-            })}
+                return (
+                  <a
+                    key={item.href}
+                    href={item.href}
+                    onClick={() => setOpen(false)}
+                    className={`
+                      text-lg font-medium transition
+                      ${isActive
+                                ? "text-sky-400"
+                                : "text-slate-200 hover:text-sky-400"}
+                    `}
+                  >
+                    {item.label}
+                  </a>
+                );
+              })}
 
+              <button
+                onClick={() => setOpenModal(true)}
+                className="
+                  mt-2 text-center px-6 py-3 rounded-xl
+                  bg-linear-to-r from-sky-500 to-blue-600
+                  text-white font-semibold
+                  shadow-md shadow-sky-500/30
+                "
+              >
+                Cotizar
+              </button>
+            </nav>
           </div>
         )}
+
       </header>
 
       {openModal && (
