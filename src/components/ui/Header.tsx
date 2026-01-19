@@ -1,40 +1,29 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { navItems } from "../../data/navigation";
 import Modal from "./Modal";
 
 export default function Header() {
   const [open, setOpen] = useState(false);
   const [openModal, setOpenModal] = useState(false);
+  const [pathname, setPathname] = useState("");
 
-  const pathname = window.location.pathname;
+  useEffect(() => {
+    setPathname(window.location.pathname);
+  }, []);
 
   const onclose = () => {
-    setOpenModal(false)
-  }
+    setOpenModal(false);
+  };
 
   return (
     <>
       <header className="fixed top-0 left-0 right-0 z-50">
-        <div
-          className="
-          bg-[#020617]/80
-          backdrop-blur-xl
-          border-b border-slate-800/60
-        "
-        >
+        <div className="bg-[#020617]/80 backdrop-blur-xl border-b border-slate-800/60">
           <div className="max-w-7xl mx-auto px-4">
             <div className="flex items-center justify-between h-16">
-
               {/* Logo */}
               <a href="/" className="flex items-center gap-3 font-semibold">
-                <div
-                  className="
-                  w-9 h-9 rounded-xl
-                  bg-linear-to-br from-sky-400 to-blue-600
-                  text-white flex items-center justify-center
-                  shadow-md shadow-sky-500/20
-                "
-                >
+                <div className="w-9 h-9 rounded-xl bg-linear-to-br from-sky-400 to-blue-600 text-white flex items-center justify-center shadow-md shadow-sky-500/20">
                   T
                 </div>
                 <span className="text-slate-100 text-lg tracking-tight">
@@ -53,10 +42,16 @@ export default function Header() {
                       href={item.href}
                       className={`
                         relative text-sm font-medium uppercase transition
-                        ${isActive ? "text-sky-400" : "text-slate-200 hover:text-sky-400"}
+                        ${isActive
+                          ? "text-sky-400"
+                          : "text-slate-200 hover:text-sky-400"
+                        }
                         after:absolute after:left-0 after:-bottom-1
                         after:h-0.5 after:bg-sky-500 after:transition-all
-                        ${isActive ? "after:w-full" : "after:w-0 hover:after:w-full"}
+                        ${isActive
+                          ? "after:w-full"
+                          : "after:w-0 hover:after:w-full"
+                        }
                       `}
                     >
                       {item.label}
@@ -65,19 +60,10 @@ export default function Header() {
                 })}
               </nav>
 
-
               {/* Desktop CTA */}
               <button
                 onClick={() => setOpenModal(true)}
-                className="
-                hidden md:inline-flex
-                px-5 py-2 rounded-xl
-                bg-linear-to-r from-sky-500 to-blue-600
-                text-white text-sm font-semibold
-                shadow-md shadow-sky-500/25
-                hover:shadow-lg hover:shadow-sky-500/40
-                hover:scale-[1.04] transition
-              "
+                className="hidden md:inline-flex px-5 py-2 rounded-xl bg-linear-to-r from-sky-500 to-blue-600 text-white text-sm font-semibold shadow-md shadow-sky-500/25 hover:shadow-lg hover:shadow-sky-500/40 hover:scale-[1.04] transition"
               >
                 Cotizar
               </button>
@@ -91,12 +77,10 @@ export default function Header() {
                 <span className="w-6 h-0.5 bg-slate-300 rounded" />
                 <span className="w-6 h-0.5 bg-slate-300 rounded" />
               </button>
-
             </div>
           </div>
         </div>
 
-        {/* Mobile menu */}
         {/* Mobile menu */}
         {open && (
           <div
@@ -105,14 +89,7 @@ export default function Header() {
           >
             <nav
               onClick={(e) => e.stopPropagation()}
-              className="
-                absolute bottom-0 left-0 right-0
-                bg-[#020617]
-                border-t border-slate-800
-                rounded-t-3xl
-                p-6 flex flex-col gap-5
-                animate-slideUp
-              "
+              className="absolute bottom-0 left-0 right-0 bg-[#020617] border-t border-slate-800 rounded-t-3xl p-6 flex flex-col gap-5 animate-slideUp"
             >
               {navItems.map((item) => {
                 const isActive = pathname === item.href;
@@ -122,12 +99,10 @@ export default function Header() {
                     key={item.href}
                     href={item.href}
                     onClick={() => setOpen(false)}
-                    className={`
-                      text-lg font-medium transition
-                      ${isActive
-                                ? "text-sky-400"
-                                : "text-slate-200 hover:text-sky-400"}
-                    `}
+                    className={`text-lg font-medium transition ${isActive
+                        ? "text-sky-400"
+                        : "text-slate-200 hover:text-sky-400"
+                      }`}
                   >
                     {item.label}
                   </a>
@@ -136,27 +111,16 @@ export default function Header() {
 
               <button
                 onClick={() => setOpenModal(true)}
-                className="
-                  mt-2 text-center px-6 py-3 rounded-xl
-                  bg-linear-to-r from-sky-500 to-blue-600
-                  text-white font-semibold
-                  shadow-md shadow-sky-500/30
-                "
+                className="mt-2 text-center px-6 py-3 rounded-xl bg-linear-to-r from-sky-500 to-blue-600 text-white font-semibold shadow-md shadow-sky-500/30"
               >
                 Cotizar
               </button>
             </nav>
           </div>
         )}
-
       </header>
 
-      {openModal && (
-        <Modal
-          isOpen={openModal}
-          onClose={onclose}
-        />
-      )}
+      {openModal && <Modal isOpen={openModal} onClose={onclose} />}
     </>
   );
 }
