@@ -76,7 +76,7 @@ export default function HeroImage() {
                             </button>
 
                             <a
-                                href="#projects"
+                                href="/projects"
                                 className="px-8 py-4 rounded-full border border-slate-700 text-white font-semibold hover:bg-slate-800 transition-all flex items-center justify-center gap-2"
                             >
                                 <Layers size={18} />
