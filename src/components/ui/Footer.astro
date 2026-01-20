@@ -1,4 +1,6 @@
 ---
+import Logo from "../../assets/DSWHITE.png"
+
 const year = new Date().getFullYear();
 
 const links = {
@@ -24,11 +26,7 @@ const links = {
             <!-- Marca -->
             <div class="lg:col-span-2">
                 <div class="flex items-center gap-3 mb-4">
-                    <div
-                        class="w-10 h-10 rounded-xl bg-linear-to-br from-blue-600 to-indigo-600 text-white flex items-center justify-center font-bold"
-                    >
-                        T
-                    </div>
+                    <img src={Logo.src} class="w-10" alt="Logo DevStack Studio" />
                     <span
                         class="text-xl font-semibold text-zinc-900 dark:text-white"
                     >

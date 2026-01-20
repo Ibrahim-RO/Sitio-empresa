@@ -219,3 +219,51 @@ body {
 .animate-scroll {
   animation: scroll 30s linear infinite;
 }
+
+/* Base */
+.animate-on-load {
+  opacity: 0;
+  animation-fill-mode: forwards;
+  animation-duration: 0.8s;
+  animation-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* Fade Up */
+.fade-up {
+  transform: translateY(24px);
+  animation-name: fadeUp;
+}
+
+/* Fade Down */
+.fade-down {
+  transform: translateY(-24px);
+  animation-name: fadeDown;
+}
+
+/* Zoom In */
+.zoom-in {
+  transform: scale(0.95);
+  animation-name: zoomIn;
+}
+
+/* Keyframes */
+@keyframes fadeUp {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeDown {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes zoomIn {
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}

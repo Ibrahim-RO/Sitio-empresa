@@ -2,6 +2,8 @@ import radiobears from "../assets/radiobears.png"
 import agencia from "../assets/agencia.jpeg"
 import cashtrackr from "../assets/cashtrackr.png"
 import cafeteria from "../assets/cafeteria.png"
+import bi from "../assets/bi.jpeg"
+import inter from "../assets/inter.png"
 
 export const projects = [
     {
@@ -28,6 +30,32 @@ export const projects = [
         technologies: [
             { name: "Next JS" },
             { name: "WordPress" },
+            { name: "TailwindCSS" },
+        ],
+    },
+    {
+        title: "InterPro",
+        description:
+            "Plataforma web de gestión avanzada para intermediarios de Habbo Hotel, con calculadora de apuestas multi-divisa, monitoreo de actividad Staff en tiempo real, ranking en la nube y reportes automatizados vía Telegram, centralizando la seguridad y administración financiera en una interfaz reactiva.",
+        image: inter,
+        colorTitle: "group-hover:text-blue-400",
+        colorBg: "group-hover:bg-blue-600",
+        technologies: [
+            { name: "React" },
+            { name: "Firebase" },
+            { name: "TailwindCSS" },
+        ],
+    },
+    {
+        title: "Portal de Reportes Diarios - Data Analytics & BI",
+        description:
+            "Plataforma de Business Intelligence que centraliza y analiza KPIs automotrices en tiempo real, generando indicadores estratégicos y reportes ejecutivos para una toma de decisiones ágil y basada en datos.",
+        image: bi,
+        colorTitle: "group-hover:text-blue-400",
+        colorBg: "group-hover:bg-blue-600",
+        technologies: [
+            { name: "Next JS" },
+            { name: "Node" },
             { name: "TailwindCSS" },
         ],
     },

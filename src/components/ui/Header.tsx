@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import { navItems } from "../../data/navigation";
 import Modal from "./Modal";
+import Logo from "../../assets/DSWHITE.png"
 
 export default function Header() {
   const [open, setOpen] = useState(false);
@@ -22,15 +23,12 @@ export default function Header() {
           <div className="max-w-7xl mx-auto px-4">
             <div className="flex items-center justify-between h-16">
               {/* Logo */}
-              <a href="/" className="flex items-center gap-3 font-semibold">
-                <div className="w-9 h-9 rounded-xl bg-linear-to-br from-sky-400 to-blue-600 text-white flex items-center justify-center shadow-md shadow-sky-500/20">
-                  T
-                </div>
+              <a href="/" className="flex items-center gap-1 font-semibold">
+                <img src={Logo.src} className="w-10" alt="Logo DevStack Studio" />
                 <span className="text-slate-100 text-lg tracking-tight">
                   DevStack Studio
                 </span>
               </a>
-
               {/* Desktop nav */}
               <nav className="hidden md:flex gap-8">
                 {navItems.map((item) => {

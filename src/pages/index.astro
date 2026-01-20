@@ -9,7 +9,10 @@ import Tecnhologies from '../components/home/Tecnhologies';
 import Layout from '../layouts/Layout.astro';
 ---
 
-<Layout title="Inicio">
+<Layout 
+	title="DevStack Studio | Agencia de Desarrollo de Software a Medida"
+	description='En DevStack Studio desarrollamos software a medida, aplicaciones web modernas y soluciones digitales escalables para empresas.'
+>
 	<HeroImage client:load />
 
 	<div class="bg-[#030712]">
@@ -19,7 +22,7 @@ import Layout from '../layouts/Layout.astro';
 
 	<div class="bg-slate-900/30">
 		<Projects />
-		<Reviews client:idle />
+		<Reviews client:only="react" />
 	</div>
 
 	<div class="bg-[#030712]">

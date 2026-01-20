@@ -9,15 +9,15 @@ import { useState } from "react";
 import Modal from "../ui/Modal";
 
 export default function HeroImage() {
-    const [open, setOpen] = useState(false)
+    const [open, setOpen] = useState(false);
 
     const onClose = () => {
-        setOpen(false)
-    }
+        setOpen(false);
+    };
 
     return (
         <section className="min-h-dvh flex justify-center items-center text-slate-300 selection:bg-blue-500/30 selection:text-white">
-            {/* Background React component */}
+            {/* Background */}
             <DataStreamBackground />
 
             {/* Decorative gradients */}
@@ -28,20 +28,21 @@ export default function HeroImage() {
 
             <section className="relative overflow-hidden w-full">
                 <div className="max-w-7xl mx-auto grid lg:grid-cols-2 gap-12 items-center relative z-10 px-6">
+
                     {/* LEFT */}
                     <div className="space-y-8 mt-5">
+
                         <div
-                            data-aos="fade-down"
-                            className="inline-flex items-center gap-2 px-3 py-1 rounded-full border border-blue-500/30 bg-blue-500/10 text-blue-400 text-xs font-mono font-bold uppercase tracking-wider"
+                            className="animate-on-load fade-down inline-flex items-center gap-2 px-3 py-1 rounded-full border border-blue-500/30 bg-blue-500/10 text-blue-400 text-xs font-mono font-bold uppercase tracking-wider"
+                            style={{ animationDelay: "0.1s" }}
                         >
-                            <span className="w-2 h-2 rounded-full bg-blue-400 animate-pulse" />
+                            <span className="w-2 h-2 rounded-full bg-blue-400" />
                             Disponible para nuevos retos
                         </div>
 
                         <h1
-                            data-aos="fade-up"
-                            data-aos-delay="100"
-                            className="text-4xl lg:text-6xl font-bold leading-[1.1] text-white"
+                            className="animate-on-load fade-up text-4xl lg:text-6xl font-bold leading-[1.1] text-white"
+                            style={{ animationDelay: "0.2s" }}
                         >
                             No escribimos código. <br />
                             <span className="text-gradient-primary">
@@ -50,9 +51,8 @@ export default function HeroImage() {
                         </h1>
 
                         <p
-                            data-aos="fade-up"
-                            data-aos-delay="200"
-                            className="text-lg text-slate-400 max-w-lg leading-relaxed"
+                            className="animate-on-load fade-up text-lg text-slate-400 max-w-lg leading-relaxed"
+                            style={{ animationDelay: "0.3s" }}
                         >
                             Agencia de desarrollo de software de alto rendimiento.
                             Transformamos ideas complejas en experiencias digitales
@@ -60,9 +60,8 @@ export default function HeroImage() {
                         </p>
 
                         <div
-                            data-aos="fade-up"
-                            data-aos-delay="300"
-                            className="flex flex-col sm:flex-row gap-4 pt-2"
+                            className="animate-on-load fade-up flex flex-col sm:flex-row gap-4 pt-2"
+                            style={{ animationDelay: "0.4s" }}
                         >
                             <button
                                 onClick={() => setOpen(true)}
@@ -85,9 +84,8 @@ export default function HeroImage() {
                         </div>
 
                         <div
-                            data-aos="fade-up"
-                            data-aos-delay="400"
-                            className="flex flex-wrap items-center gap-6 pt-4 text-sm text-slate-500 font-mono"
+                            className="animate-on-load fade-up flex flex-wrap items-center gap-6 pt-4 text-sm text-slate-500 font-mono"
+                            style={{ animationDelay: "0.5s" }}
                         >
                             <span className="flex items-center gap-2">
                                 <CheckCircle2 size={14} className="text-blue-500" />
@@ -106,13 +104,13 @@ export default function HeroImage() {
 
                     {/* RIGHT */}
                     <div
-                        data-aos="zoom-in"
-                        data-aos-delay="250"
-                        className="relative flex justify-center lg:justify-end"
+                        className="animate-on-load zoom-in relative flex justify-center lg:justify-end"
+                        style={{ animationDelay: "0.35s" }}
                     >
                         <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 size-150 bg-linear-to-tr from-blue-600/20 to-purple-600/20 rounded-full blur-[80px] -z-10" />
                         <Terminal />
                     </div>
+
                 </div>
             </section>
 
