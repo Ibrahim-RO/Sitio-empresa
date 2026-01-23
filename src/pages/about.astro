@@ -18,7 +18,7 @@ import { Picture } from "astro:assets";
         <section class="relative w-full overflow-x-hidden py-10">
             <Picture
                 src={bannerMovil}
-                alt="Sobre TriCode Studio"
+                alt="Sobre DevStack Studio"
                 formats={["avif", "webp"]}
                 class="absolute inset-0 w-full h-full object-cover object-center md:hidden"
             />
@@ -30,14 +30,12 @@ import { Picture } from "astro:assets";
                 class="absolute inset-0 w-full h-full object-cover hidden md:block"
             />
 
-            <!-- Overlay mejorado -->
             <div
                 class="absolute inset-0 bg-linear-to-br from-black/85 via-black/65 to-blue-900/45"
             >
             </div>
             <div class="absolute inset-0 backdrop-blur-[2px]"></div>
 
-            <!-- Efecto de grid sutil -->
             <div
                 class="absolute inset-0 opacity-10"
                 style="background-image: linear-gradient(rgba(59, 130, 246, 0.1) 1px, transparent 1px), linear-gradient(90deg, rgba(59, 130, 246, 0.1) 1px, transparent 1px); background-size: 50px 50px;"
@@ -50,7 +48,7 @@ import { Picture } from "astro:assets";
                 <span
                     class="text-xs tracking-[0.35em] uppercase text-blue-400 mb-5 font-medium"
                 >
-                    TriCode Studio
+                    DevStack Studio
                 </span>
 
                 <h1
@@ -76,11 +74,9 @@ import { Picture } from "astro:assets";
             </div>
         </section>
 
-        <!-- CONTENIDO -->
         <section
             class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-24 space-y-32 text-white"
         >
-            <!-- QUIÉNES SOMOS -->
             <section class="grid grid-cols-1 lg:grid-cols-3 gap-12 items-start">
                 <div
                     class="relative p-3"
@@ -124,9 +120,7 @@ import { Picture } from "astro:assets";
                 </div>
             </section>
 
-            <!-- MISIÓN / VISIÓN -->
             <section class="grid grid-cols-1 md:grid-cols-2 gap-10">
-                <!-- MISIÓN -->
                 <div
                     class="group rounded-3xl border border-white/10 bg-white/5 backdrop-blur hover:bg-white/10 hover:border-blue-500/30 transition-all duration-500 hover:shadow-xl hover:shadow-blue-500/10 overflow-hidden"
                     data-aos="fade-up"
@@ -173,7 +167,6 @@ import { Picture } from "astro:assets";
                     </div>
                 </div>
 
-                <!-- VISIÓN -->
                 <div
                     class="group rounded-3xl border border-white/10 bg-white/5 backdrop-blur hover:bg-white/10 hover:border-blue-500/30 transition-all duration-500 hover:shadow-xl hover:shadow-blue-500/10 overflow-hidden"
                     data-aos="fade-up"
@@ -220,7 +213,6 @@ import { Picture } from "astro:assets";
                 </div>
             </section>
 
-            <!-- OBJETIVOS -->
             <section class="space-y-12">
                 <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-start">
                     <div data-aos="fade-right" data-aos-duration="800">
@@ -278,7 +270,6 @@ import { Picture } from "astro:assets";
                 </div>
             </section>
 
-            <!-- VALORES -->
             <section class="space-y-12">
                 <h2
                     class="text-3xl sm:text-4xl lg:text-5xl font-bold"
