@@ -2,7 +2,7 @@ import { useRef, useState } from 'react'
 import emailjs from '@emailjs/browser'
 import { X, CheckCircle2, Send } from 'lucide-react'
 
-const SERVICE_ID = 'service_chy07qy'
+const SERVICE_ID = 'service_ktfxryd'
 const TEMPLATE_ID = 'template_biiskdj'
 const PUBLIC_KEY = '8JNSto7PZk0zC_R_3'
 
