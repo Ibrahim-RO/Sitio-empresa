@@ -1,4 +1,5 @@
 ---
+import Customers from '../components/home/Customers.astro';
 import HeroImage from '../components/home/HeroImage';
 import Innovation from '../components/home/Innovation';
 import Process from '../components/home/Process.astro';
@@ -22,6 +23,7 @@ import Layout from '../layouts/Layout.astro';
 
 	<div class="bg-slate-900/30">
 		<Projects />
+		<Customers />
 		<Reviews client:only="react" />
 	</div>
 

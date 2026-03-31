@@ -1,3 +1,4 @@
+import camarilloCasting from "../assets/camarillo-casting.png"
 import radiobears from "../assets/radiobears.png"
 import agencia from "../assets/agencia.jpeg"
 import cashtrackr from "../assets/cashtrackr.png"
@@ -6,6 +7,19 @@ import bi from "../assets/bi.jpeg"
 import inter from "../assets/inter.png"
 
 export const projects = [
+    {
+        title: "Camarillo Casting",
+        description:
+            "Sitio web diseñado para mostrar los trabajos de Camarillo Casting en distintas producciones audiovisuales, donde también se facilita el contacto para clientes y talento interesados en colaborar.",
+        image: camarilloCasting,
+        colorTitle: "group-hover:text-blue-400",
+        colorBg: "group-hover:bg-blue-600",
+        technologies: [
+            { name: "NextJS" },
+            { name: "TypeScript" },
+            { name: "TailwindCSS" },
+        ],
+    },
     {
         title: "RadioBears",
         description:

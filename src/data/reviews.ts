@@ -1,10 +1,10 @@
 export const reviews = [
     {
-        name: "Carlos Méndez",
-        role: "CEO, TechNova",
+        name: "Antonio Camarillo",
+        role: "CEO CamarilloCasting",
         rating: 5,
         comment:
-            "El equipo superó todas nuestras expectativas. El rendimiento y la calidad del código fueron impecables.",
+            "Excelente equipo de trabajo. Destacan por su rapidez de respuesta, atención y disposición para realizar cambios en todo momento. El proceso fue claro, profesional y muy eficiente. El resultado final superó mis expectativas. Sin duda, totalmente recomendados.",
     },
     {
         name: "Laura Gómez",
@@ -12,13 +12,6 @@ export const reviews = [
         rating: 4,
         comment:
             "Excelente comunicación y tiempos de entrega. Totalmente recomendados para proyectos escalables.",
-    },
-    {
-        name: "Miguel Torres",
-        role: "CTO, Fintech Labs",
-        rating: 5,
-        comment:
-            "Implementaron IA y automatizaciones que redujeron nuestros costos operativos drásticamente.",
     },
     {
         name: "Andrea Ruiz",

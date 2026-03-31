@@ -7,7 +7,7 @@ export default function Tecnhologies() {
 
   return (
     <section className="py-12 overflow-hidden bg-white/10 border-t border-slate-800/50 relative">
-      <p className="text-center text-slate-300 text-sm font-mono mb-8 uppercase tracking-widest">Powered by Modern Tech</p>
+      <p className="text-center text-slate-300 text-sm font-mono mb-8 uppercase tracking-widest">Usamos Tecnologías Modernas</p>
 
       {/* Degradados laterales para suavizar la entrada/salida */}
       <div className="absolute top-0 bottom-0 left-0 w-24 z-10 bg-linear-to-r from-[#030712] to-transparent pointer-events-none"></div>
