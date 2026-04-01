@@ -1,6 +1,20 @@
 ---
 import { Image } from "astro:assets";
 import logoCC from "../../assets/logoBlanco.png";
+import logoGE from "../../assets/grupo-excelencia.png";
+
+const customers = [
+    {
+        name: "Camarillo Casting",
+        logo: logoCC,
+        alt: "Logo Camarillo Casting"
+    },
+    {
+        name: "Grupo Excelencia",
+        logo: logoGE,
+        alt: "Logo Grupo Excelencia"
+    }
+];
 
 ---
 
@@ -8,11 +22,11 @@ import logoCC from "../../assets/logoBlanco.png";
     <h2 class="text-3xl md:text-4xl font-bold mb-10 text-center">Nuestros Clientes</h2>
 
     <div class="flex justify-center items-center">
-        <Image 
-            src={logoCC}
-            alt="Logo Camarillo Casting"
-            class="w-50 h-auto object-contain"
-        />
+        <div class="flex flex-wrap justify-center items-center gap-10">
+            {customers.map((customer) => (
+                <Image src={customer.logo} alt={customer.alt} class="w-48 h-auto object-contain" />
+            ))}
+        </div>
     </div>
     
 </section>
