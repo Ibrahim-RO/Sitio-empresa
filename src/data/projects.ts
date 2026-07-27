@@ -5,8 +5,22 @@ import cashtrackr from "../assets/cashtrackr.png"
 import cafeteria from "../assets/cafeteria.png"
 import bi from "../assets/bi.jpeg"
 import inter from "../assets/inter.png"
+import ia from "../assets/ia.jpeg"
 
 export const projects = [
+    {
+        title: "SYSTEMWOODS IA",
+        description:
+            "Plataforma para jugadores de Free Fire que utiliza Inteligencia Artificial para generar configuraciones de sensibilidad personalizadas según el dispositivo, preferencias de sensibilidad y DPI. Incluye gestión de usuarios con planes de suscripción, recomendaciones de la comunidad, combos de habilidades, cursos exclusivos y un panel de administración para gestionar usuarios, contenido, dispositivos y analíticas.",
+        image: ia,
+        colorTitle: "group-hover:text-blue-400",
+        colorBg: "group-hover:bg-blue-600",
+        technologies: [
+            { name: "NextJS" },
+            { name: "React" },
+            { name: "TailwindCSS" },
+        ],
+    },
     {
         title: "Camarillo Casting",
         description:
