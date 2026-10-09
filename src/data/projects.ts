@@ -6,8 +6,23 @@ import cafeteria from "../assets/cafeteria.png"
 import bi from "../assets/bi.jpeg"
 import inter from "../assets/inter.png"
 import ia from "../assets/ia.jpeg"
+import kw from "../assets/kw.png"
 
 export const projects = [
+    {
+        title: "Keller Williams México",
+        description:
+            "Desarrollo de una plataforma web inmobiliaria para Keller Williams México, enfocada en la consulta, visualización y gestión de propiedades mediante una interfaz moderna, responsiva y orientada a la experiencia del usuario. El proyecto integró servicios y endpoints de AWS para el consumo y procesamiento de información, además de implementar mapas interactivos y geolocalización para mostrar las propiedades de acuerdo con su ubicación.",
+        image: kw,
+        colorTitle: "group-hover:text-blue-400",
+        colorBg: "group-hover:bg-blue-600",
+        technologies: [
+            { name: "NestJS" },
+            { name: "NextJS" },
+            { name: "TailwindCSS" },
+            { name: "AWS" },
+        ],
+    },
     {
         title: "SYSTEMWOODS IA",
         description:
