@@ -89,19 +89,19 @@ export const projects = [
             { name: "TailwindCSS" },
         ],
     },
-    {
-        title: "Portal de Reportes Diarios - Data Analytics & BI",
-        description:
-            "Plataforma de Business Intelligence que centraliza y analiza KPIs automotrices en tiempo real, generando indicadores estratégicos y reportes ejecutivos para una toma de decisiones ágil y basada en datos.",
-        image: bi,
-        colorTitle: "group-hover:text-blue-400",
-        colorBg: "group-hover:bg-blue-600",
-        technologies: [
-            { name: "Next JS" },
-            { name: "Node" },
-            { name: "TailwindCSS" },
-        ],
-    },
+    // {
+    //     title: "Portal de Reportes Diarios - Data Analytics & BI",
+    //     description:
+    //         "Plataforma de Business Intelligence que centraliza y analiza KPIs automotrices en tiempo real, generando indicadores estratégicos y reportes ejecutivos para una toma de decisiones ágil y basada en datos.",
+    //     image: bi,
+    //     colorTitle: "group-hover:text-blue-400",
+    //     colorBg: "group-hover:bg-blue-600",
+    //     technologies: [
+    //         { name: "Next JS" },
+    //         { name: "Node" },
+    //         { name: "TailwindCSS" },
+    //     ],
+    // },
     {
         title: "Sistema de Cafetería",
         description:
